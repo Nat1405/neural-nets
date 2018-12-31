@@ -16,7 +16,7 @@ class Neuron(object):
         """
         """
         self.z = np.dot(self.previous_layer.activations, self.weights) + self.bias
-        # Activation is sigmoid(z) where sigmoid comes from scipy
+        # Activation is sigmoid(z) where sigmoid comes from scipy.special.expit
         self.activation = scipy.special.expit(self.z)
 
 class Input_Layer(object):
@@ -86,7 +86,7 @@ class Network(object):
         self.update()
 
     def get_outputs(self):
-        """Return two decimal list of outputs
+        """Return two decimal vector of outputs
         """
         copy = np.copy(self.layers[-1].activations)
         twodecimals = ["%.2f" % v for v in copy]
@@ -105,13 +105,3 @@ class Network(object):
         return rep
 
 
-
-
-
-
-
-
-
-
-
-#

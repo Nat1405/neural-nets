@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-from test import Network
+from neuralnets import Network
+
+# Neural network to translate digits 0 to 9 to a binary representation
 
 # Initial inputs to the network
 inputs = [1,0,0,0,0,0,0,0,0,0]
